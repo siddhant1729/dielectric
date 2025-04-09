@@ -12,7 +12,7 @@ struct DataPoint {
     double epsilon;
 };
 
-// Constants
+
 const double A = 8.0 * 6.0;         // Area in mm²
 const double t = 1.42;              // Thickness in mm
 const double epsilon_0 = 8.85e-3;   // pF/mm
@@ -40,7 +40,7 @@ int main() {
         data[i].epsilon = calculateEpsilon(data[i].capacitance);
     }
 
-    // Find Curie temperature (max epsilon)
+  
     double maxEpsilon = numeric_limits<double>::min();
     double curieTemp = 0;
 
@@ -51,7 +51,7 @@ int main() {
         }
     }
 
-    // Output table
+
     cout << "\nTemperature vs Dielectric Constant:\n";
     cout << "-----------------------------------\n";
     cout << "Temp (°C)\tCapacitance (pF)\tDielectric Constant\n";
